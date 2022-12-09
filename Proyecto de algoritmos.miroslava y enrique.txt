@@ -1,0 +1,481 @@
+package juegode21;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author yoshi
+ */
+public class Juegode21 {
+static int felix[][];
+static int sayuri[][];
+static int jin,jk;
+static int lola,limon,cafe,camaron;
+static String cortes,seojun;
+static Scanner rm = new Scanner (System.in);
+  
+    public static void main (String[] args) {
+        
+      System.out.println("Igresa numero de filas ");
+       jin =rm.nextInt();
+      System.out.println("Ingrese numero de columnas ");
+       jk =rm.nextInt();
+       felix=new int [jin][jk];
+       sayuri = new int[jin][jk];
+       for(int i=0;i<jin;i++){
+           for (int j=0;j<jk;j++){
+               felix[i][j]=1;
+               
+           }
+       }
+        for(int i=0;i<jin;i++){
+           for (int j=0;j<jk;j++){
+               sayuri[i][j]=1;
+               
+           }
+       }
+        System.out.println("---INGRESE NOMBRE DE JUGADOR---");
+        cortes=rm.next();
+        jugador1();
+        System.out.println("---INGRESE NOMBRE DE JUGADOR---");
+        seojun=rm.next();
+            jugador2();
+            ataque();
+    }
+        public static  void jugador1(){
+            String suga;
+            System.out.println("-------INGRESA LA POCISION DE BARCO--------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-4){
+                        for(int i=0;i<4;i++){
+                            felix[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-4 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<4;i++){
+                            felix[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+                      System.out.println("-------INGRESA LA POCISION DE BARCO 2--------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-3){
+                        for(int i=0;i<3;i++){
+                            felix[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-3 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<3;i++){
+                            felix[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+            System.out.println("-------INGRESA LA POCISION DE BARCO 3--------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-2){
+                        for(int i=0;i<2;i++){
+                            felix[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-2 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<2;i++){
+                            felix[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+            System.out.println("-------INGRESA LA POCISION DE BARCO 4 --------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-1){
+                        for(int i=0;i<1;i++){
+                            felix[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-1 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<1;i++){
+                            felix[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(felix[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+            
+        } 
+        public static  void jugador2(){
+            String suga;
+            System.out.println("-------INGRESA LA POCISION DE BARCO--------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-4){
+                        for(int i=0;i<4;i++){
+                            sayuri[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-4 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<4;i++){
+                            sayuri[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+                      System.out.println("-------INGRESA LA POCISION DE BARCO 2--------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-3){
+                        for(int i=0;i<3;i++){
+                            sayuri[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            System.out.println(" ");
+                        }
+                            }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-3 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<3;i++){
+                            sayuri[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+            System.out.println("-------INGRESA LA POCISION DE BARCO 3--------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-2){
+                        for(int i=0;i<2;i++){
+                            sayuri[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-2 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<2;i++){
+                            sayuri[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+            System.out.println("-------INGRESA LA POCISION DE BARCO 4 --------");
+            suga=rm.next();
+            switch(suga){
+                case"h":
+                    System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int rj=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int js=rm.nextInt();
+                    if(rj>=0 && rj<=jin && js>=0 && js<=jk-1){
+                        for(int i=0;i<1;i++){
+                            sayuri[rj][js+i]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                    break;
+                    case"v":
+                        System.out.println("---------Ingresa cordendas Horizontal------- ");
+                    int tae=rm.nextInt();
+                    System.out.println("---------Ingresa cordenadas en Vertical------");
+                    int tiny=rm.nextInt();
+                    if(tae>=0 && tae<=jin-1 && tiny>=0 && tiny<=jk){
+                        for(int i=0;i<1;i++){
+                            sayuri[tae+i][tiny]=3;
+                            
+                        }
+                        for(int j=0;j<jin;j++){
+                            for(int p=0;p<jk;p++){
+                                System.out.print(sayuri[j][p]+" ");
+                            }
+                            System.out.println(" ");
+                        }
+                    }
+                        break;
+            }
+        }
+        public static void ataque(){
+           for(int i=0;i<felix.length;i++)
+               for (int j=0;j<felix.length-1;j++)
+                   
+                  for(int l=0;l<sayuri.length;l++)
+                      for(int u=0;u<sayuri.length-1;u++)
+                          while(felix[i][j]==3 && sayuri[l][u]==3 ){
+                              System.out.println("---Turno jugador ---"+cortes);
+                              System.out.println("---Ingrese la posicion Horizontal---");
+                              lola=rm.nextInt();
+                              System.out.println("--Ingrese posisision Vertical--");
+                              limon=rm.nextInt();
+                              if(lola>=0 && lola<=jin && limon>=0 && limon<=jk){
+                                  if(sayuri[lola][limon]==3){
+                                      System.out.println("...LE DISTE A UN BARCO UWU...");
+                                      for(int h =0;h<jin;h++){
+                                          for(int t=0;t<jk; t++){
+                                              sayuri[lola][limon]=2;
+                                              
+                                          }
+                                      }
+                                  }else if(sayuri[lola][limon]==1){
+                                      System.out.println("...NO LE DISTE AL BARCO :/...");
+                                      for(int h =0;h<jin;h++){
+                                          for(int t=0;t<jk; t++){
+                                              sayuri[lola][limon]=2;
+                                              
+                                          }
+                                      }
+                                  }else if(sayuri[lola][limon]==2){
+                                      System.out.println("--ESA POSICION YA FUE ATACADA--");
+                                      
+                                  }
+                                  System.out.println("---Turno jugador  ---" + seojun);
+                              System.out.println("---Ingrese la posicion Horizontal---");
+                              cafe=rm.nextInt();
+                              System.out.println("--Ingrese posisision Vertical--");
+                              camaron=rm.nextInt();
+                              if(cafe>=0 && cafe<=jin && camaron>=0 && camaron<=jk){
+                                  if(felix[cafe][camaron]==3){
+                                      System.out.println("...LE DISTE A UN BARCO UWU...");
+                                      for(int h =0;h<jin;h++){
+                                          for(int t=0;t<jk; t++){
+                                              felix[cafe][camaron]=2;
+                                              
+                                          }
+                                      }
+                                  }else if(felix[cafe][camaron]==1){
+                                      System.out.println("...NO LE DISTE AL BARCO :/...");
+                                      for(int h =0;h<jin;h++){
+                                          for(int t=0;t<jk; t++){
+                                              felix[cafe][camaron]=2;
+                                              
+                                          }
+                                      }
+                                  }else if(felix[cafe][camaron]==2){
+                                      System.out.println("--ESA POSICION YA FUE ATACADA--");
+                                      
+                                  }
+                              }
+                              
+                          }
+               
+               }
+           for(int i=0;i<felix.length;i++)
+               for (int j=0;j<felix.length-1;j++)
+                   
+                  for(int l=0;l<sayuri.length;l++)
+                      for(int u=0;u<sayuri.length-1;u++)
+                          if (felix [i][j]==3||sayuri[l][u]==3){
+                              if(felix[i][j]==3){
+                                  System.out.println("------PERDIO JUGADOR -----"+seojun);
+                                  for(int o=0;o<jin;o++){
+                                      for(int y=0;y<jk;y++){
+                                          System.out.print(felix[o][y]+" ");
+                                      }
+                                      System.out.println(" ");
+                                  }
+                              }else{
+                                  System.out.println("----GANASTE JUGADOR ----"+ seojun);
+                                  for(int o=0;o<jin;o++){
+                                      for(int y=0;y<jk;y++){
+                                          System.out.print(felix[o][y]+" ");
+                                      }
+                                      System.out.println(" ");
+                                  }
+                              }
+                             
+                              if(sayuri[i][j]==3){
+                                  System.out.println("------PERDIO JUGADOR -----"+" "+cortes);
+                                  for(int o=0;o<jin;o++){
+                                      for(int y=0;y<jk;y++){
+                                          System.out.print(sayuri[o][y]+" ");
+                                      }
+                                      System.out.println(" ");
+                                  }
+                              }else{
+                                  System.out.println("----GANASTE JUGADOR ----"+ " "+cortes);
+                                  for(int o=0;o<jin;o++){
+                                      for(int y=0;y<jk;y++){
+                                          System.out.print(sayuri[o][y]+" ");
+                                      }
+                                      System.out.println(" ");
+                                  }
+                              }
+                             
+                          }
+           
+}
+}
